@@ -5,7 +5,7 @@
     <ProjectGuid>{9dc0c972-de01-47e9-8284-a81fa3f9761d}</ProjectGuid>
     <Name>Even More Resources for Vox Populi</Name>
     <Guid>8e54eb87-31e8-4fcd-aafe-ede055b463d0</Guid>
-    <ModVersion>4</ModVersion>
+    <ModVersion>5</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>
 	[ICON_BULLET]Adds even more resources to Vox Populi.
@@ -109,11 +109,13 @@
     <ModContent>
       <Content>
         <Type>InGameUIAddin</Type>
-        <Name>Custom Farm Scripts</Name>
-        <Description>Custom Farm Scripts</Description>
-        <FileName>Lua/CustomFarm_Scripts.lua</FileName>
+        <Name>EvenMoreResources_Functions</Name>
+        <Description>EvenMoreResources_Functions</Description>
+        <FileName>Lua/EvenMoreResources_Functions.lua</FileName>
       </Content>
     </ModContent>
+    <ReloadAudioSystem>true</ReloadAudioSystem>
+    <ReloadUnitSystem>true</ReloadUnitSystem>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
@@ -150,6 +152,7 @@
     <Folder Include="Art\IconAtlas" />
     <Folder Include="Core" />
     <Folder Include="Lua" />
+    <Folder Include="Lua\Utilities" />
     <Folder Include="Overrides" />
   </ItemGroup>
   <ItemGroup>
@@ -1713,9 +1716,17 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="Lua\CustomFarm_Scripts.lua">
+    <Content Include="Lua\EvenMoreResources_Functions.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Lua\Utilities\EvenMoreResources_Utilities.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Lua\Utilities\HFF_SaveUtils.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Overrides\AssignStartingPlots.lua">
       <SubType>Lua</SubType>

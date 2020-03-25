@@ -168,6 +168,7 @@ UPDATE Resources SET
 	Civilopedia = 'TXT_KEY_CIV5_RESOURCE_PLATINUM_TEXT',
 	Help = 'TXT_KEY_RESOURCE_PLATINUM_HELP',
 	ArtDefineTag = 'ART_DEF_RESOURCE_PLATINUM',
+	ArtDefineTagHeavy = 'ART_DEF_RESOURCE_PLATINUM_HEAVY',
 	IconString = '[ICON_RES_PLATINUM]',
 	PortraitIndex = 7,
 	IconAtlas = 'EVEN_MORE_RESOURCES_ATLAS_A',
@@ -268,6 +269,7 @@ UPDATE Resources SET
 	Civilopedia = 'TXT_KEY_CIV5_RESOURCE_LEAD_TEXT',
 	Help = 'TXT_KEY_RESOURCE_LEAD_HELP',
 	ArtDefineTag = 'ART_DEF_RESOURCE_LEAD',
+	--ArtDefineTagHeavy = 'ART_DEF_RESOURCE_LEAD_HEAVY',
 	IconString = '[ICON_RES_LEAD]',
 	PortraitIndex = 5,
 	IconAtlas = 'EVEN_MORE_RESOURCES_ATLAS_A',
@@ -818,7 +820,7 @@ BEGIN
 	FROM Resources r, Building_ResourceYieldChanges ryc, BuildingClasses bc
 	WHERE r.Type IN('RESOURCE_LAVENDER', 'RESOURCE_OBSIDIAN', 'RESOURCE_PLATINUM', 'RESOURCE_POPPY', 'RESOURCE_TIN', 'RESOURCE_COCONUT', 'RESOURCE_HARDWOOD', 'RESOURCE_LEAD', 'RESOURCE_MAIZE', 'RESOURCE_PINEAPPLE', 'RESOURCE_POTATO', 'RESOURCE_RICE', 'RESOURCE_RUBBER', 'RESOURCE_SULFUR', 'RESOURCE_TITANIUM') AND ryc.ResourceType = r.Type AND bc.Type = NEW.BuildingClassType AND ryc.BuildingType = bc.DefaultBuilding;
 
-	UPDATE Building_ResourceYieldChanges SET YieldType = 'YIELD_GOLD' WHERE ResourceType = 'RESOURCE_WHEAT' AND YieldType = 'YIELD_FOOD' AND BuildingType IN(SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_GRANARY' AND BuildingType = NEW.BuildingType;
+	UPDATE Building_ResourceYieldChanges SET YieldType = 'YIELD_GOLD' WHERE ResourceType = 'RESOURCE_WHEAT' AND YieldType = 'YIELD_FOOD' AND Yield = 1 AND BuildingType = NEW.BuildingType AND BuildingType IN(SELECT Type FROM Buildings WHERE BuildingClass = 'BUILDINGCLASS_GRANARY');
 END;
 ----------------------------------------------------------------------------------------------------------------------------
 ---- Building_LocalResourceOrs
@@ -841,12 +843,13 @@ CREATE TRIGGER EvenMoreResourcesForVP_LocalResourceOrs
 AFTER INSERT ON Civilization_BuildingClassOverrides 
 WHEN NEW.BuildingClassType
 IN(
-	SELECT b.BuildingClass
+	SELECT DISTINCT b.BuildingClass
 	FROM Buildings b, Resources r, Building_LocalResourceOrs lro
 	WHERE r.Type IN('RESOURCE_OBSIDIAN', 'RESOURCE_SULFUR')
 	AND lro.ResourceType = r.Type
 	AND b.Type = lro.BuildingType
 )
+AND NEW.BuildingType IS NOT NULL
 BEGIN
 	INSERT INTO Building_LocalResourceOrs
 					(BuildingType, ResourceType)
