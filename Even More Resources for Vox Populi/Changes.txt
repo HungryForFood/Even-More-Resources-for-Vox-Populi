@@ -32,3 +32,8 @@ v5
 - Sulfur and Obsidian now correctly unlock Stone Works.
 - Luxuries now correctly unlock Corporations.
 - Backend: When farms are removed, the original continent type for the plot is restored. Works across save games.
+
+--------------------------------------------------------------
+v6
+--------------------------------------------------------------
+- Backend: No longer overrides VP's AssignStartingPlots.lua. Changes to the lua now directly within VP.

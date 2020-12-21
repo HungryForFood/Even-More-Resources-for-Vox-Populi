@@ -8,7 +8,7 @@
 --=======================================================================================================================
 -- To use simply change these resource definitions
 -------------------------------
--- The idea of this workaround is from CustomFarm_Scripts.lua from the Bonus Resources Expanded mod by Hammurabi1337, with contributions from Leugi/
+-- The idea of this workaround is from CustomFarm_Scripts.lua from the Bonus Resources Expanded mod by Hammurabi1337, with contributions from Leugi.
 
 print("EvenMoreResources_Functions.lua has loaded")
 --=======================================================================================================================

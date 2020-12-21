@@ -5,7 +5,7 @@
     <ProjectGuid>{9dc0c972-de01-47e9-8284-a81fa3f9761d}</ProjectGuid>
     <Name>Even More Resources for Vox Populi</Name>
     <Guid>8e54eb87-31e8-4fcd-aafe-ede055b463d0</Guid>
-    <ModVersion>5</ModVersion>
+    <ModVersion>6</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>
 	[ICON_BULLET]Adds even more resources to Vox Populi.
@@ -1725,10 +1725,6 @@
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Lua\Utilities\HFF_SaveUtils.lua">
-      <SubType>Lua</SubType>
-      <ImportIntoVFS>True</ImportIntoVFS>
-    </Content>
-    <Content Include="Overrides\AssignStartingPlots.lua">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
