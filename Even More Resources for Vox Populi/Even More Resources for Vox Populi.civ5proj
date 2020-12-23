@@ -5,16 +5,16 @@
     <ProjectGuid>{9dc0c972-de01-47e9-8284-a81fa3f9761d}</ProjectGuid>
     <Name>Even More Resources for Vox Populi</Name>
     <Guid>8e54eb87-31e8-4fcd-aafe-ede055b463d0</Guid>
-    <ModVersion>6</ModVersion>
+    <ModVersion>7</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>
 	[ICON_BULLET]Adds even more resources to Vox Populi.
-	[NEWLINE][ICON_BULLET]Requires the [COLOR_POSITIVE_TEXT]11/01/20[ENDCOLOR] version or newer of Vox Populi.
+	[NEWLINE][ICON_BULLET]Requires the [COLOR_POSITIVE_TEXT]01/12/20[ENDCOLOR] version or newer of Vox Populi.
 	[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Incompatible[ENDCOLOR] with the [COLOR_HIGHLIGHT_TEXT]Communitas[ENDCOLOR] map.
 	</Teaser>
     <Description>
 	[ICON_BULLET]Adds even more resources to Vox Populi.
-	[NEWLINE][ICON_BULLET]Requires the [COLOR_POSITIVE_TEXT]11/01/20[ENDCOLOR] version or newer of Vox Populi.
+	[NEWLINE][ICON_BULLET]Requires the [COLOR_POSITIVE_TEXT]01/12/20[ENDCOLOR] version or newer of Vox Populi.
 	[NEWLINE][ICON_BULLET][COLOR_NEGATIVE_TEXT]Incompatible[ENDCOLOR] with the [COLOR_HIGHLIGHT_TEXT]Communitas[ENDCOLOR] map.
 	</Description>
     <Authors>HungryForFood</Authors>

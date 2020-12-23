@@ -37,3 +37,8 @@ v5
 v6
 --------------------------------------------------------------
 - Backend: No longer overrides VP's AssignStartingPlots.lua. Changes to the lua now directly within VP.
+
+--------------------------------------------------------------
+v7
+--------------------------------------------------------------
+- Added compatibility with Spain's new improvement, Hacienda. Will work with the VP version which comes after 01/12/20.
