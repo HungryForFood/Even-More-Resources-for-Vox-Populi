@@ -42,3 +42,8 @@ v6
 v7
 --------------------------------------------------------------
 - Added compatibility with Spain's new improvement, Hacienda. Will work with the VP version which comes after 01/12/20.
+
+--------------------------------------------------------------
+v8
+--------------------------------------------------------------
+- Fixed Tin not having a monopoly bonus.

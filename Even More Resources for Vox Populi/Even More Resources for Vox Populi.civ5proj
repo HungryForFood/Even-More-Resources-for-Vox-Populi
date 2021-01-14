@@ -5,7 +5,7 @@
     <ProjectGuid>{9dc0c972-de01-47e9-8284-a81fa3f9761d}</ProjectGuid>
     <Name>Even More Resources for Vox Populi</Name>
     <Guid>8e54eb87-31e8-4fcd-aafe-ede055b463d0</Guid>
-    <ModVersion>7</ModVersion>
+    <ModVersion>8</ModVersion>
     <Stability>Stable</Stability>
     <Teaser>
 	[ICON_BULLET]Adds even more resources to Vox Populi.

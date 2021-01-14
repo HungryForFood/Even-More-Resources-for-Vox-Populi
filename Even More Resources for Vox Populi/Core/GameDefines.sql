@@ -620,6 +620,13 @@ INSERT INTO Resource_CityYieldModFromMonopoly
 VALUES	('RESOURCE_LAVENDER', 'YIELD_CULTURE', 10),
 		('RESOURCE_PLATINUM', 'YIELD_SCIENCE', 10);
 --------------------------------------------------------------------------------------------------------------------------
+---- Resource_YieldChangeFromMonopoly
+--------------------------------------------------------------------------------------------------------------------------
+-- Luxuries
+INSERT INTO Resource_YieldChangeFromMonopoly
+		(ResourceType, YieldType, Yield)
+VALUES	('RESOURCE_TIN', 'YIELD_GOLD', 3);
+--------------------------------------------------------------------------------------------------------------------------
 ---- Resource_MonopolyCombatModifiers
 --------------------------------------------------------------------------------------------------------------------------
 INSERT INTO Resource_MonopolyCombatModifiers
